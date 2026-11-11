@@ -1,0 +1,33 @@
+# Personal journal data — never commit these files.
+/数据/
+/data/
+**/行记.json
+**/行记.json.*
+**/*.bak
+**/*.bak.*
+**/.lock
+**/.session
+
+# Local builds, archives, logs, and test output.
+/dist/
+/release/
+*.exe
+*.zip
+*.log
+*.tmp
+*.incoming
+__pycache__/
+*.py[cod]
+.pytest_cache/
+playwright-report/
+test-results/
+
+# Earlier, unused visual/font drafts kept locally; the app embeds only
+# lantern-river.png, LXGW WenKai, and Ma Shan Zheng.
+/web/ink-hills.png
+/web/jianghu.png
+/web/river-gate.png
+/web/NotoSansCJKsc-Regular.otf
+/web/NotoSerifCJKsc-SemiBold.otf
+/web/FONT-LICENSE.txt
+/web/SERIF-LICENSE.txt

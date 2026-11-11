@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light">
+  <title>江湖行记</title>
+  <link rel="icon" href="seal.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="style.css">
+  <script type="module" src="app.js"></script>
+</head>
+<body>
+  <div class="desktop-caption">
+    <img src="seal.svg" width="17" height="17" alt=""><span>江湖行记</span>
+    <div class="window-actions">
+      <button type="button" data-window="minimize" aria-label="最小化" title="最小化"><i></i></button>
+      <button type="button" data-window="maximize" aria-label="最大化" title="最大化"><i></i></button>
+      <button type="button" data-window="close" aria-label="关闭窗口" title="关闭窗口"><i></i></button>
+    </div>
+  </div>
+  <header class="masthead">
+    <div class="landscape" aria-hidden="true">
+      <div class="night-water"></div>
+      <div class="river-mist"></div>
+      <div class="lantern-light"></div>
+      <div class="embers"><i></i><i></i><i></i><i></i></div>
+    </div>
+    <div class="heading">
+      <div class="brand"><img src="seal.svg" width="16" height="16" alt="">江湖行记</div>
+      <h1><button type="button" id="period-label" title="跳转到日期"></button></h1>
+      <p id="reflection"></p>
+    </div>
+    <div class="header-controls">
+      <div class="header-row">
+        <nav class="views" aria-label="日历视图">
+          <button type="button" data-view="day" aria-label="日视图">日</button>
+          <button type="button" data-view="week" aria-label="周视图">周</button>
+          <button type="button" data-view="month" aria-label="月视图">月</button>
+        </nav>
+        <div class="period">
+          <button type="button" id="previous" aria-label="上一个周期">‹</button>
+          <button type="button" id="today">今天</button>
+          <button type="button" id="next" aria-label="下一个周期">›</button>
+        </div>
+      </div>
+      <div class="header-row utilities">
+        <div id="filter" class="filters" aria-label="显示内容" hidden>
+          <button type="button" data-filter="all">全部</button>
+          <button type="button" data-filter="plan">计划</button>
+          <button type="button" data-filter="actual">实际</button>
+        </div>
+        <button type="button" id="duration">补记时长</button>
+        <button type="button" id="stats" hidden>统计</button>
+        <button type="button" id="settings">设置</button>
+        <button type="button" id="exit">退出</button>
+      </div>
+    </div>
+  </header>
+  <div id="recovery" role="status" hidden>已从上一个有效备份打开行记。下一次保存会修复主文件。</div>
+  <main id="workspace" aria-label="日历" aria-busy="true">
+    <p class="loading">正在打开行记…</p>
+  </main>
+  <footer class="statusbar">
+    <span id="summary"></span>
+    <span id="status" role="status" aria-live="polite"></span>
+  </footer>
+  <dialog id="agenda" class="day-agenda" aria-labelledby="agenda-heading"></dialog>
+  <dialog id="panel"></dialog>
+  <div id="time-tip" hidden aria-hidden="true"></div>
+</body>
+</html>
